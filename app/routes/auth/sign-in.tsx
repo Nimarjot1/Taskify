@@ -50,8 +50,9 @@ const SignIn = () => {
             <FormField control={form.control}
             name="password"
             render={({ field })=>(
-              <FormItem>
-                <FormLabel>Password</FormLabel>
+              <FormItem><div className="flex-items-center justify-between">
+                <FormLabel>Password</FormLabel></div>
+                <Link to="/forget-password" className='text-sm text-blue-600'>Forget password?</Link>
                 <FormControl>
                   <Input type="password" placeholder="**********" {...field}/>
                 </FormControl>
@@ -61,7 +62,7 @@ const SignIn = () => {
             <Button type="submit" className="w-full">Sign in</Button>
           </form>
         </Form>
-        <CardFooter><div className="flex items-center justify-center">
+        <CardFooter><div className="flex items-center justify-center mt-6">
           <p className="text-sm text-muted-foreground">
             Don&apos;t have an account?{" "}
           </p>
